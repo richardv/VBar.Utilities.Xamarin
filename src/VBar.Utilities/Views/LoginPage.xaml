@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:viewmodels="clr-namespace:VBarUtilities.ViewModels" 
+             x:DataType="viewmodels:LoginViewModel"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             mc:Ignorable="d"
+             x:Class="VBarUtilities.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             >
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="VStabi Cloud" IconImageSource="VStabiLink.png" Clicked="OpenVStabi_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="This is only for the VBar Control Touch. The Classic does not upload its data to the cloud and is not currently supported by VBar Utilities."></Label>
+            <Label Text="Enter your vstabi.info cloud login details." />
+            <Label Text="They will be stored locally in the provided device secure storage. They are only transmitted directly to the vstabi website for logging in." />
+            <Label Text="Username" />
+            <Entry Text="{Binding Username}" Placeholder="Username" Keyboard="Email" />
+            <Label Text="Password" />
+            <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
+            <syncfusion:SfCheckBox Text="Save my vstabi credentials" IsChecked="{Binding CanSaveCredentials}" />
+            <Label Text="Start Year (ignore flights before this)" />
+            <Entry Text="{Binding StartYear}" Placeholder="Start Year" />
+            <Button Text="Login" Command="{Binding LoginCommand}"/>
+            <Label Text="{Binding Status}" />
+            <ProgressBar Progress="{Binding Progress}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

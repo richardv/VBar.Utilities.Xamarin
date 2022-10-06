@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="Flight Statistics"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="VBarUtilities.Views.HomePage"
+    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+    xmlns:system="clr-namespace:System;assembly=netstandard"
+    >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Screenshots" IconImageSource="Folder.png" Clicked="Screenshots_Clicked" />
+        <ToolbarItem Text="VStabi Cloud" IconImageSource="VStabiLink.png" Clicked="OpenVStabi_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <system:Double x:Key="labelWidth">200</system:Double>
+            <system:Double x:Key="contentWidth">100</system:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,10,10,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <FlexLayout Grid.Row="0" Grid.Column="0" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="Today:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="TodayFlights" />
+                            <Label x:Name="TodayDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="0" Grid.Column="1" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="This month:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="MonthFlights" />
+                            <Label x:Name="MonthDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="0" Grid.Column="2" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="This year:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="YearFlights" />
+                            <Label x:Name="YearDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="1" Grid.Column="0" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="Yesterday:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="YesterdayFlights" />
+                            <Label x:Name="YesterdayDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="1" Grid.Column="1" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="Last month:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="LastMonthFlights" />
+                            <Label x:Name="LastMonthDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="1" Grid.Column="2" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="Last year:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="LastYearFlights" />
+                            <Label x:Name="LastYearDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="2" Grid.Column="0" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <StackLayout WidthRequest="{StaticResource labelWidth}">
+                            <Label Text="Best day:" FontAttributes="Bold" />
+                            <Label x:Name="BestDay" FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="BestDayFlights" />
+                            <Label x:Name="BestDayDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="2" Grid.Column="1" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <StackLayout WidthRequest="{StaticResource labelWidth}">
+                            <Label Text="Best month:" FontAttributes="Bold" />
+                            <Label x:Name="BestMonth" FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="BestMonthFlights" />
+                            <Label x:Name="BestMonthDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="2" Grid.Column="2" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <StackLayout WidthRequest="{StaticResource labelWidth}">
+                            <Label Text="Best year:" FontAttributes="Bold" />
+                            <Label x:Name="BestYear" FontAttributes="Bold" LineBreakMode="WordWrap" />
+                        </StackLayout>
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="BestYearFlights" />
+                            <Label x:Name="BestYearDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="3" Grid.Column="0" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="Total:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="TotalFlights" />
+                            <Label x:Name="TotalDuration" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="3" Grid.Column="1" Wrap="Wrap" Padding="0, 0, 0, 10">
+                        <Label Text="Average:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <Label x:Name="AverageDuration" WidthRequest="{StaticResource contentWidth}" />
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="4" Grid.Column="0" Wrap="Wrap">
+                        <Label Text="Current streak:" FontAttributes="Bold" WidthRequest="{StaticResource labelWidth}" />
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="StreakDays" />
+                            <Label x:Name="StreakFlights" />
+                        </StackLayout>
+                    </FlexLayout>
+
+                    <FlexLayout Grid.Row="4" Grid.Column="1" Wrap="Wrap">
+                        <StackLayout WidthRequest="{StaticResource labelWidth}">
+                            <Label Text="Best streak:" FontAttributes="Bold" />
+                            <Label x:Name="BestStreakDate" FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout WidthRequest="{StaticResource contentWidth}">
+                            <Label x:Name="BestStreakDays" />
+                            <Label x:Name="BestStreakFlights" />
+                            <Label x:Name="Updates" TextColor="Red" />
+                        </StackLayout>
+                    </FlexLayout>
+                </Grid>
+
+                <chart:SfChart HeightRequest="400" x:Name="Chart">
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Flights by Month" />
+                    </chart:SfChart.Title>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend DockPosition="Right" ToggleSeriesVisibility="True" />
+                    </chart:SfChart.Legend>
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis />
+                    </chart:SfChart.PrimaryAxis>
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis />
+                    </chart:SfChart.SecondaryAxis>
+                    <chart:SfChart.ChartBehaviors>
+                        <chart:ChartTooltipBehavior Duration="10" FontSize="14"></chart:ChartTooltipBehavior>
+                    </chart:SfChart.ChartBehaviors>
+                </chart:SfChart>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:converters="clr-namespace:VBarUtilities.Converters;assembly=VBarUtilities"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="VBarUtilities.Views.FlightsPage"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeConverter x:Key="dateTimeConverter" />
+            <converters:FlightsConverter x:Key="flightsConverter" />
+            <converters:DurationConverter x:Key="durationConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="VStabi Flights" IconImageSource="VStabiLink.png" Clicked="OpenVStabiFlights_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,10,10,10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                    <buttons:SfRadioGroup x:Name="GroupBy" Orientation="Horizontal" CheckedChanged="GroupBy_OnCheckedChanged">
+                        <buttons:SfRadioButton Text="Year" />
+                        <buttons:SfRadioButton Text="Month" IsChecked="True"/>
+                        <buttons:SfRadioButton Text="Week"/>
+                        <buttons:SfRadioButton Text="Day"/>
+                    </buttons:SfRadioGroup>
+                    <Picker ItemsSource="{Binding Models}" SelectedItem="{Binding ModelName}" SelectedIndexChanged="Picker_OnSelectedIndexChanged" />
+                </StackLayout>
+                <chart:SfChart HeightRequest="400">
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis />
+                    </chart:SfChart.PrimaryAxis>
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis />
+                    </chart:SfChart.SecondaryAxis>
+                    <chart:ColumnSeries
+                    ItemsSource ="{Binding Flights}" 
+                    XBindingPath="Name"
+					YBindingPath="TotalFlights">
+                        <chart:ColumnSeries.DataMarker>
+                            <chart:ChartDataMarker ShowLabel="True" />
+                        </chart:ColumnSeries.DataMarker>
+                    </chart:ColumnSeries>
+                </chart:SfChart>
+                <ListView ItemsSource="{Binding Flights}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                            <RowDefinition Height="Auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" />
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding TotalFlights, Converter={StaticResource flightsConverter}}" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Duration, Converter={StaticResource durationConverter}}" />
+                                        <Label Grid.Row="1" Grid.Column="2" Text="{Binding FirstDate, Converter={StaticResource dateTimeConverter}}" />
+                                        <Label Grid.Row="1" Grid.Column="3" Text="{Binding LastDate, Converter={StaticResource dateTimeConverter}}" />
+                                        <Button Grid.Row="1" Grid.Column="4" Text="Flights" Clicked="Flights_OnClicked" />
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
