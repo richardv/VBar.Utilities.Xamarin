@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xForms="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="VBarUtilities.Views.FlightPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Label Text="Flight Details" FontAttributes="Bold" />
+                <Label x:Name="Date" />
+                <Label x:Name="Model" />
+                <Label x:Name="Duration" />
+                <Label x:Name="Controller" />
+                <Label x:Name="Device" />
+                <Image x:Name="ControllerImage" />
+                <Image x:Name="ModelImage" />
+                <Label x:Name="Capacity" />
+                <Label x:Name="BatteryName" />
+                <Label x:Name="Used" />
+                <Label x:Name="StartV" />
+                <Label x:Name="MinV" />
+                <Label x:Name="EndV" />
+                <Label x:Name="AmpsMax" />
+                <ScrollView HeightRequest="200">
+                    <Label x:Name="EventLogs" />
+                </ScrollView>
+
+                <xForms:SfChart HeightRequest="250">
+                    <xForms:SfChart.Title>
+                        <xForms:ChartTitle Text="Amps" />
+                    </xForms:SfChart.Title>
+                    <xForms:SfChart.ChartBehaviors>
+                        <xForms:ChartTooltipBehavior Duration="10" FontSize="14"></xForms:ChartTooltipBehavior>
+                    </xForms:SfChart.ChartBehaviors>
+                    <xForms:LineSeries x:Name="Series1" XBindingPath="Name" YBindingPath="Value" Label="Amps" EnableTooltip="True"></xForms:LineSeries>
+                </xForms:SfChart>
+
+                <xForms:SfChart HeightRequest="250">
+                    <xForms:SfChart.Title>
+                        <xForms:ChartTitle Text="Volts" />
+                    </xForms:SfChart.Title>
+                    <xForms:SfChart.ChartBehaviors>
+                        <xForms:ChartTooltipBehavior Duration="10" FontSize="14"></xForms:ChartTooltipBehavior>
+                    </xForms:SfChart.ChartBehaviors>
+                    <xForms:LineSeries x:Name="Series2" XBindingPath="Name" YBindingPath="Value" EnableTooltip="True"></xForms:LineSeries>
+                </xForms:SfChart>
+
+                <xForms:SfChart HeightRequest="250">
+                    <xForms:SfChart.Title>
+                        <xForms:ChartTitle Text="Used" />
+                    </xForms:SfChart.Title>
+                    <xForms:SfChart.ChartBehaviors>
+                        <xForms:ChartTooltipBehavior Duration="10" FontSize="14"></xForms:ChartTooltipBehavior>
+                    </xForms:SfChart.ChartBehaviors>
+                    <xForms:LineSeries x:Name="Series3" XBindingPath="Name" YBindingPath="Value" EnableTooltip="True"></xForms:LineSeries>
+                </xForms:SfChart>
+
+                <xForms:SfChart HeightRequest="250">
+                    <xForms:SfChart.Title>
+                        <xForms:ChartTitle Text="RPM" />
+                    </xForms:SfChart.Title>
+                    <xForms:SfChart.ChartBehaviors>
+                        <xForms:ChartTooltipBehavior Duration="10" FontSize="14"></xForms:ChartTooltipBehavior>
+                    </xForms:SfChart.ChartBehaviors>
+                    <xForms:LineSeries x:Name="Series4" XBindingPath="Name" YBindingPath="Value" EnableTooltip="True"></xForms:LineSeries>
+                </xForms:SfChart>
+
+                <xForms:SfChart HeightRequest="250">
+                    <xForms:SfChart.Title>
+                        <xForms:ChartTitle Text="Throttle" />
+                    </xForms:SfChart.Title>
+                    <xForms:SfChart.ChartBehaviors>
+                        <xForms:ChartTooltipBehavior Duration="10" FontSize="14"></xForms:ChartTooltipBehavior>
+                    </xForms:SfChart.ChartBehaviors>
+                    <xForms:LineSeries x:Name="Series5" XBindingPath="Name" YBindingPath="Value" EnableTooltip="True"></xForms:LineSeries>
+                </xForms:SfChart>
+
+                <xForms:SfChart HeightRequest="250">
+                    <xForms:SfChart.Title>
+                        <xForms:ChartTitle Text="Temp" />
+                    </xForms:SfChart.Title>
+                    <xForms:SfChart.ChartBehaviors>
+                        <xForms:ChartTooltipBehavior Duration="10" FontSize="14"></xForms:ChartTooltipBehavior>
+                    </xForms:SfChart.ChartBehaviors>
+                    <xForms:LineSeries x:Name="Series6" XBindingPath="Name" YBindingPath="Value" EnableTooltip="True"></xForms:LineSeries>
+                </xForms:SfChart>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:VBarUtilities.Converters;assembly=VBarUtilities"
+             x:Class="VBarUtilities.Views.ControllersPage"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:FlightsConverter x:Key="flightsConverter" />
+            <converters:DateTimeConverter x:Key="dateTimeConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  IconImageSource="VStabiLink.png" Text="VStabi Controllers" Clicked="VStabiControllers_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label x:Name="ControllerCount" />
+            <ListView x:Name="Controllers" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                <Image Source="{Binding ImageData}"/>
+                                <Label Text="{Binding Flights, Converter={StaticResource flightsConverter}}"/>
+                                <Label Text="{Binding FirstDate, Converter={StaticResource dateTimeConverter}, StringFormat='From \{0\}'}" />
+                                <Label Text="{Binding LastDate, Converter={StaticResource dateTimeConverter}, StringFormat='To \{0\}'}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

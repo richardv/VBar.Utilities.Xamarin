@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:VBarUtilities.Converters;assembly=VBarUtilities"
+             x:Class="VBarUtilities.Views.BatteriesPage"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:AgoConverter x:Key="agoConverter" />
+            <converters:FirstUsedConverter x:Key="firstUsedConverter" />
+            <converters:DateConverter x:Key="dateConverter" />
+            <converters:FlightsConverter x:Key="flightsConverter" />
+            <converters:DurationConverter x:Key="durationConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="VStabi Batteries" IconImageSource="VStabiLink.png" Clicked="OpenVStabiBatteries_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label x:Name="BatteryCount" />
+            <ListView x:Name="Batteries" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Size}" />
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding TotalFlights, Converter={StaticResource flightsConverter}}" />
+                                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding TotalDuration, Converter={StaticResource durationConverter}}" />
+                                    <Label Grid.Row="2" Grid.Column="0" Text="{Binding LastFlight, Converter={StaticResource agoConverter}}" />
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding LastFlight, Converter={StaticResource dateConverter}}" />
+                                    <Label Grid.Row="2" Grid.Column="2" Text="{Binding LastDuration, Converter={StaticResource durationConverter}}" />
+                                    <Label Grid.Row="3" Grid.Column="0" Text="{Binding FirstFlight, Converter={StaticResource firstUsedConverter}}" />
+                                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding FirstFlight, Converter={StaticResource dateConverter}}" />
+                                    <Button Grid.Row="3" Grid.Column="2" Text="View" Clicked="View_OnClicked"></Button>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

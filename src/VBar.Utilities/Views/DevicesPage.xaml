@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:VBarUtilities.Converters;assembly=VBarUtilities"
+             x:Class="VBarUtilities.Views.DevicesPage"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DeviceTypeConverter x:Key="deviceTypeConverter" />
+            <converters:BoolConverter x:Key="boolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="VStabiLink.png" Text="VStabi Devices" Clicked="VStabiDevices_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label x:Name="DevicesCount" />
+            <ListView x:Name="Devices" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Type, Converter={StaticResource deviceTypeConverter}}" />
+                                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding Note}" />
+                                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding SerialNo}" />
+                                    <Label Grid.Row="1" Grid.Column="3" Text="{Binding Update, Converter={StaticResource boolConverter}, StringFormat='Update: {0}'}" />
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

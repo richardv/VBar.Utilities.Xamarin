@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VBarUtilities.Views.SettingsPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Folder.png" Text="Data Folder" Clicked="DataFolder_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,10,10,10">
+            <Label>
+                This will clear the data downloaded from vstabi. It will not clear any Parts information you are tracking.
+            </Label>
+            <Label>
+                Use the Data Folder link above to backup or delete your local database.
+            </Label>
+            <Button Text="Reset local database" BackgroundColor="Red" Clicked="ResetDatabaseClick" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

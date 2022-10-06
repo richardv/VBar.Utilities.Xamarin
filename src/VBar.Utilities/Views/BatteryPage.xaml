@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="VBarUtilities.Views.BatteryPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+                <Label x:Name="Name" />
+                <Label x:Name="Spec" />
+                <Label x:Name="FlightCount" />
+                <Label x:Name="StoreAging" />
+                <Label x:Name="FlightAging" />
+                <Label x:Name="FlightsFound" />
+
+                <chart:SfChart HeightRequest="300" x:Name="Chart">
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Capacity" />
+                    </chart:SfChart.Title>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend DockPosition="Right" ToggleSeriesVisibility="True" />
+                    </chart:SfChart.Legend>
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis />
+                    </chart:SfChart.PrimaryAxis>
+                    <chart:LineSeries x:Name="Series" XBindingPath="Date" YBindingPath="Capacity" Label="Capacity" EnableTooltip="True"></chart:LineSeries>
+                    <chart:LineSeries x:Name="Series2" XBindingPath="Date" YBindingPath="CapacityUsed" Label="Used" EnableTooltip="True"></chart:LineSeries>
+                    <chart:SfChart.ChartBehaviors>
+                        <chart:ChartTooltipBehavior Duration="10" FontSize="14"></chart:ChartTooltipBehavior>
+                    </chart:SfChart.ChartBehaviors>
+                </chart:SfChart>
+
+                <chart:SfChart HeightRequest="300" x:Name="Chart2">
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Voltage" />
+                    </chart:SfChart.Title>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend DockPosition="Right" ToggleSeriesVisibility="True" />
+                    </chart:SfChart.Legend>
+                    <chart:SfChart.PrimaryAxis >
+                        <chart:CategoryAxis />
+                    </chart:SfChart.PrimaryAxis>
+                    <chart:LineSeries x:Name="Series3" XBindingPath="Date" YBindingPath="VoltEnd" Label="End" EnableTooltip="True"></chart:LineSeries>
+                    <chart:LineSeries x:Name="Series4" XBindingPath="Date" YBindingPath="VoltMin" Label="Minimum" EnableTooltip="True"></chart:LineSeries>
+                    <chart:SfChart.ChartBehaviors>
+                        <chart:ChartTooltipBehavior Duration="10" FontSize="14"></chart:ChartTooltipBehavior>
+                    </chart:SfChart.ChartBehaviors>
+                </chart:SfChart>
+
+                <chart:SfChart HeightRequest="300" x:Name="Chart3">
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle Text="Amps" />
+                    </chart:SfChart.Title>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend DockPosition="Right" ToggleSeriesVisibility="True" />
+                    </chart:SfChart.Legend>
+                    <chart:SfChart.PrimaryAxis >
+                        <chart:CategoryAxis />
+                    </chart:SfChart.PrimaryAxis>
+                    <chart:LineSeries x:Name="Series6" XBindingPath="Date" YBindingPath="AmpsMax" Label="Max Amps" EnableTooltip="True"></chart:LineSeries>
+                    <chart:SfChart.ChartBehaviors>
+                        <chart:ChartTooltipBehavior Duration="10" FontSize="14"></chart:ChartTooltipBehavior>
+                    </chart:SfChart.ChartBehaviors>
+                </chart:SfChart>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:VBarUtilities.Converters;assembly=VBarUtilities"
+             x:Class="VBarUtilities.Views.FlightsByDatePage"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeConverter x:Key="dateTimeConverter" />
+            <converters:DurationConverter x:Key="durationConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label x:Name="Title" FontAttributes="Bold" />
+            <Label x:Name="FlightCount" />
+
+            <ListView x:Name="Flights">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding DateAndTime, Converter={StaticResource dateTimeConverter}}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding ModelName}" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding DurationS, Converter={StaticResource durationConverter}}" />
+                                <Button Grid.Row="0" Grid.Column="3" Text="View" Clicked="ViewFlight_OnClicked"  />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
