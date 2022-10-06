@@ -6,6 +6,7 @@ using Xamarin.Forms;
 namespace VBarUtilities.Droid.Models
 {
     using System.Threading.Tasks;
+    using VBarUtilities.Models;
 
     public class PlatformAndroid : IPlatform
     {

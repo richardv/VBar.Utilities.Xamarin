@@ -7,7 +7,8 @@ namespace VBarUtilities.Droid.Models
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
-    using Views;
+    using VBarUtilities.Models;
+    using VBarUtilities.ViewModels;
 
     public class ClassicImportAndroid : IClassicImport
     {
