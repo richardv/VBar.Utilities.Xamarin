@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xForms="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="VBarUtilities.Views.StatsPage"    
+>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="More stats" />
+            <xForms:SfChart HeightRequest="400" Series="{Binding FlightsByHour}">
+                <xForms:SfChart.Title>
+                    <xForms:ChartTitle Text="Flights % by Hour" />
+                </xForms:SfChart.Title>
+                <xForms:SfChart.Legend>
+                    <xForms:ChartLegend DockPosition="Right" ToggleSeriesVisibility="True" />
+                </xForms:SfChart.Legend>
+                <xForms:SfChart.PrimaryAxis>
+                    <xForms:CategoryAxis />
+                </xForms:SfChart.PrimaryAxis>
+                <xForms:SfChart.SecondaryAxis>
+                    <xForms:NumericalAxis />
+                </xForms:SfChart.SecondaryAxis>
+            </xForms:SfChart>
+            <xForms:SfChart HeightRequest="400" Series="{Binding FlightsByDay}">
+                <xForms:SfChart.Title>
+                    <xForms:ChartTitle Text="Flights % by Day" />
+                </xForms:SfChart.Title>
+                <xForms:SfChart.Legend>
+                    <xForms:ChartLegend DockPosition="Right" ToggleSeriesVisibility="True" />
+                </xForms:SfChart.Legend>
+                <xForms:SfChart.PrimaryAxis>
+                    <xForms:CategoryAxis />
+                </xForms:SfChart.PrimaryAxis>
+                <xForms:SfChart.SecondaryAxis>
+                    <xForms:NumericalAxis Minimum="0" />
+                </xForms:SfChart.SecondaryAxis>
+            </xForms:SfChart>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

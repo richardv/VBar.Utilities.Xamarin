@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VBarUtilities.Views.SetupPage"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10,10,10,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="Name" FontAttributes="Bold" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="Bank 1" FontAttributes="Bold"></Label>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Bank 2" FontAttributes="Bold"></Label>
+                    <Label Grid.Row="0" Grid.Column="3" Text="Bank 3" FontAttributes="Bold"></Label>
+                    <Label Grid.Row="0" Grid.Column="4" Text="AR bank" FontAttributes="Bold"></Label>
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Flight Parameter" FontAttributes="Bold"></Label>
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Collective Curve" FontAttributes="Bold"></Label>
+
+                    <Label Grid.Row="3" Grid.Column="0" Text="Max"></Label>
+                    <Label Grid.Row="3" Grid.Column="1" x:Name="Collective_100_1"></Label>
+                    <Label Grid.Row="3" Grid.Column="2" x:Name="Collective_100_2"></Label>
+                    <Label Grid.Row="3" Grid.Column="3" x:Name="Collective_100_3"></Label>
+                    <Label Grid.Row="3" Grid.Column="4" x:Name="Collective_100_4"></Label>
+
+                    <Label Grid.Row="4" Grid.Column="0" Text="P 50%"></Label>
+                    <Label Grid.Row="4" Grid.Column="1" x:Name="Collective_50_1"></Label>
+                    <Label Grid.Row="4" Grid.Column="2" x:Name="Collective_50_2"></Label>
+                    <Label Grid.Row="4" Grid.Column="3" x:Name="Collective_50_3"></Label>
+                    <Label Grid.Row="4" Grid.Column="4" x:Name="Collective_50_4"></Label>
+
+                    <Label Grid.Row="5" Grid.Column="0" Text="Center"></Label>
+                    <Label Grid.Row="5" Grid.Column="1" x:Name="Collective_0_1"></Label>
+                    <Label Grid.Row="5" Grid.Column="2" x:Name="Collective_0_2"></Label>
+                    <Label Grid.Row="5" Grid.Column="3" x:Name="Collective_0_3"></Label>
+                    <Label Grid.Row="5" Grid.Column="4" x:Name="Collective_0_4"></Label>
+
+                    <Label Grid.Row="6" Grid.Column="0" Text="P -50%"></Label>
+                    <Label Grid.Row="6" Grid.Column="1" x:Name="Collective_minus50_1"></Label>
+                    <Label Grid.Row="6" Grid.Column="2" x:Name="Collective_minus50_2"></Label>
+                    <Label Grid.Row="6" Grid.Column="3" x:Name="Collective_minus50_3"></Label>
+                    <Label Grid.Row="6" Grid.Column="4" x:Name="Collective_minus50_4"></Label>
+
+                    <Label Grid.Row="7" Grid.Column="0" Text="Min"></Label>
+                    <Label Grid.Row="7" Grid.Column="1" x:Name="Collective_minus100_1"></Label>
+                    <Label Grid.Row="7" Grid.Column="2" x:Name="Collective_minus100_2"></Label>
+                    <Label Grid.Row="7" Grid.Column="3" x:Name="Collective_minus100_3"></Label>
+                    <Label Grid.Row="7" Grid.Column="4" x:Name="Collective_minus100_4"></Label>
+
+                    <Label Grid.Row="8" Grid.Column="0" Text="Main Rotor" FontAttributes="Bold"></Label>
+
+                    <Label Grid.Row="9" Grid.Column="0" Text="Exponential"></Label>
+                    <Label Grid.Row="9" Grid.Column="1" x:Name="Mainrotor_Expo_1"></Label>
+                    <Label Grid.Row="9" Grid.Column="2" x:Name="Mainrotor_Expo_2"></Label>
+                    <Label Grid.Row="9" Grid.Column="3" x:Name="Mainrotor_Expo_3"></Label>
+                    <Label Grid.Row="9" Grid.Column="4" x:Name="Mainrotor_Expo_4"></Label>
+
+                    <Label Grid.Row="10" Grid.Column="0" Text="Agility"></Label>
+                    <Label Grid.Row="10" Grid.Column="1" x:Name="Mainrotor_Rate_1"></Label>
+                    <Label Grid.Row="10" Grid.Column="2" x:Name="Mainrotor_Rate_2"></Label>
+                    <Label Grid.Row="10" Grid.Column="3" x:Name="Mainrotor_Rate_3"></Label>
+                    <Label Grid.Row="10" Grid.Column="4" x:Name="Mainrotor_Rate_4"></Label>
+
+                    <Label Grid.Row="11" Grid.Column="0" Text="Gain"></Label>
+                    <Label Grid.Row="11" Grid.Column="1" x:Name="Mainrotor_Gain_1"></Label>
+                    <Label Grid.Row="11" Grid.Column="2" x:Name="Mainrotor_Gain_2"></Label>
+                    <Label Grid.Row="11" Grid.Column="3" x:Name="Mainrotor_Gain_3"></Label>
+                    <Label Grid.Row="11" Grid.Column="4" x:Name="Mainrotor_Gain_4"></Label>
+
+                    <Label Grid.Row="12" Grid.Column="0" Text="Style"></Label>
+                    <Label Grid.Row="12" Grid.Column="1" x:Name="Mainrotor_Style_1"></Label>
+                    <Label Grid.Row="12" Grid.Column="2" x:Name="Mainrotor_Style_2"></Label>
+                    <Label Grid.Row="12" Grid.Column="3" x:Name="Mainrotor_Style_3"></Label>
+                    <Label Grid.Row="12" Grid.Column="4" x:Name="Mainrotor_Style_4"></Label>
+
+                    <Label Grid.Row="13" Grid.Column="0" Text="Lightness"></Label>
+                    <Label Grid.Row="13" Grid.Column="1" x:Name="Mainrotor_Lightness_1"></Label>
+                    <Label Grid.Row="13" Grid.Column="2" x:Name="Mainrotor_Lightness_2"></Label>
+                    <Label Grid.Row="13" Grid.Column="3" x:Name="Mainrotor_Lightness_3"></Label>
+                    <Label Grid.Row="13" Grid.Column="4" x:Name="Mainrotor_Lightness_4"></Label>
+
+                    <Label Grid.Row="14" Grid.Column="0" Text="Elev. Precomp"></Label>
+                    <Label Grid.Row="14" Grid.Column="1" x:Name="Mainrotor_Elev_Prec_1"></Label>
+                    <Label Grid.Row="14" Grid.Column="2" x:Name="Mainrotor_Elev_Prec_2"></Label>
+                    <Label Grid.Row="14" Grid.Column="3" x:Name="Mainrotor_Elev_Prec_3"></Label>
+                    <Label Grid.Row="14" Grid.Column="4" x:Name="Mainrotor_Elev_Prec_4"></Label>
+
+                    <Label Grid.Row="15" Grid.Column="0" Text="Paddlesim"></Label>
+                    <Label Grid.Row="15" Grid.Column="1" x:Name="Mainrotor_Paddle_Sim_1"></Label>
+                    <Label Grid.Row="15" Grid.Column="2" x:Name="Mainrotor_Paddle_Sim_2"></Label>
+                    <Label Grid.Row="15" Grid.Column="3" x:Name="Mainrotor_Paddle_Sim_3"></Label>
+                    <Label Grid.Row="15" Grid.Column="4" x:Name="Mainrotor_Paddle_Sim_4"></Label>
+
+                    <Label Grid.Row="16" Grid.Column="0" Text="Integral"></Label>
+                    <Label Grid.Row="16" Grid.Column="1" x:Name="Mainrotor_Integral_1"></Label>
+                    <Label Grid.Row="16" Grid.Column="2" x:Name="Mainrotor_Integral_2"></Label>
+                    <Label Grid.Row="16" Grid.Column="3" x:Name="Mainrotor_Integral_3"></Label>
+                    <Label Grid.Row="16" Grid.Column="4" x:Name="Mainrotor_Integral_4"></Label>
+
+                    <Label Grid.Row="17" Grid.Column="0" Text="Pitch pump"></Label>
+                    <Label Grid.Row="17" Grid.Column="1" x:Name="Mainrotor_Pitch_Pump_1"></Label>
+                    <Label Grid.Row="17" Grid.Column="2" x:Name="Mainrotor_Pitch_Pump_2"></Label>
+                    <Label Grid.Row="17" Grid.Column="3" x:Name="Mainrotor_Pitch_Pump_3"></Label>
+                    <Label Grid.Row="17" Grid.Column="4" x:Name="Mainrotor_Pitch_Pump_4"></Label>
+
+                    <Label Grid.Row="18" Grid.Column="0" Text="Coll. Balance"></Label>
+                    <Label Grid.Row="18" Grid.Column="1" x:Name="Collective_Balance_1"></Label>
+                    <Label Grid.Row="18" Grid.Column="2" x:Name="Collective_Balance_2"></Label>
+                    <Label Grid.Row="18" Grid.Column="3" x:Name="Collective_Balance_3"></Label>
+                    <Label Grid.Row="18" Grid.Column="4" x:Name="Collective_Balance_4"></Label>
+
+                    <Label Grid.Row="19" Grid.Column="0" Text="Optimizer Values"></Label>
+                    <Label Grid.Row="19" Grid.Column="1" x:Name="Mainrotor_Optimizer_1"></Label>
+                    <Label Grid.Row="19" Grid.Column="2" x:Name="Mainrotor_Optimizer_2"></Label>
+                    <Label Grid.Row="19" Grid.Column="3" x:Name="Mainrotor_Optimizer_3"></Label>
+                    <Label Grid.Row="19" Grid.Column="4" x:Name="Mainrotor_Optimizer_4"></Label>
+
+                    <Label Grid.Row="20" Grid.Column="0" Text="Optimizer"></Label>
+                    <Label Grid.Row="20" Grid.Column="1" x:Name="Mainrotor_Optimizer"></Label>
+
+                    <Label Grid.Row="21" Grid.Column="0" Text="General Response"></Label>
+                    <Label Grid.Row="21" Grid.Column="1" x:Name="Heli_Size"></Label>
+
+                    <Label Grid.Row="22" Grid.Column="0" Text="Tail Rotor" FontAttributes="Bold"></Label>
+
+                    <Label Grid.Row="23" Grid.Column="0" Text="Exponential"></Label>
+                    <Label Grid.Row="23" Grid.Column="1" x:Name="Tailrotor_Expo_1"></Label>
+                    <Label Grid.Row="23" Grid.Column="2" x:Name="Tailrotor_Expo_2"></Label>
+                    <Label Grid.Row="23" Grid.Column="3" x:Name="Tailrotor_Expo_3"></Label>
+                    <Label Grid.Row="23" Grid.Column="4" x:Name="Tailrotor_Expo_4"></Label>
+
+                    <Label Grid.Row="24" Grid.Column="0" Text="Yaw Rate"></Label>
+                    <Label Grid.Row="24" Grid.Column="1" x:Name="Tailrotor_Rate_1"></Label>
+                    <Label Grid.Row="24" Grid.Column="2" x:Name="Tailrotor_Rate_2"></Label>
+                    <Label Grid.Row="24" Grid.Column="3" x:Name="Tailrotor_Rate_3"></Label>
+                    <Label Grid.Row="24" Grid.Column="4" x:Name="Tailrotor_Rate_4"></Label>
+
+                    <Label Grid.Row="25" Grid.Column="0" Text="Gain"></Label>
+                    <Label Grid.Row="25" Grid.Column="1" x:Name="Tailrotor_Gain_1"></Label>
+                    <Label Grid.Row="25" Grid.Column="2" x:Name="Tailrotor_Gain_2"></Label>
+                    <Label Grid.Row="25" Grid.Column="3" x:Name="Tailrotor_Gain_3"></Label>
+                    <Label Grid.Row="25" Grid.Column="4" x:Name="Tailrotor_Gain_4"></Label>
+
+                    <Label Grid.Row="26" Grid.Column="0" Text="Proportional"></Label>
+                    <Label Grid.Row="26" Grid.Column="1" x:Name="Tailrotor_P_Gain_1"></Label>
+                    <Label Grid.Row="26" Grid.Column="2" x:Name="Tailrotor_P_Gain_2"></Label>
+                    <Label Grid.Row="26" Grid.Column="3" x:Name="Tailrotor_P_Gain_3"></Label>
+                    <Label Grid.Row="26" Grid.Column="4" x:Name="Tailrotor_P_Gain_4"></Label>
+
+                    <Label Grid.Row="27" Grid.Column="0" Text="Integral"></Label>
+                    <Label Grid.Row="27" Grid.Column="1" x:Name="Tailrotor_I_Gain_1"></Label>
+                    <Label Grid.Row="27" Grid.Column="2" x:Name="Tailrotor_I_Gain_2"></Label>
+                    <Label Grid.Row="27" Grid.Column="3" x:Name="Tailrotor_I_Gain_3"></Label>
+                    <Label Grid.Row="27" Grid.Column="4" x:Name="Tailrotor_I_Gain_4"></Label>
+
+                    <Label Grid.Row="28" Grid.Column="0" Text="I Limiter"></Label>
+                    <Label Grid.Row="28" Grid.Column="1" x:Name="Tailrotor_I_Limit_1"></Label>
+                    <Label Grid.Row="28" Grid.Column="2" x:Name="Tailrotor_I_Limit_2"></Label>
+                    <Label Grid.Row="28" Grid.Column="3" x:Name="Tailrotor_I_Limit_3"></Label>
+                    <Label Grid.Row="28" Grid.Column="4" x:Name="Tailrotor_I_Limit_4"></Label>
+
+                    <Label Grid.Row="29" Grid.Column="0" Text="I Discharge"></Label>
+                    <Label Grid.Row="29" Grid.Column="1" x:Name="Tailrotor_I_Discharge_1"></Label>
+                    <Label Grid.Row="29" Grid.Column="2" x:Name="Tailrotor_I_Discharge_2"></Label>
+                    <Label Grid.Row="29" Grid.Column="3" x:Name="Tailrotor_I_Discharge_3"></Label>
+                    <Label Grid.Row="29" Grid.Column="4" x:Name="Tailrotor_I_Discharge_4"></Label>
+
+                    <Label Grid.Row="30" Grid.Column="0" Text="Differential"></Label>
+                    <Label Grid.Row="30" Grid.Column="1" x:Name="Tailrotor_D_Gain_1"></Label>
+                    <Label Grid.Row="30" Grid.Column="2" x:Name="Tailrotor_D_Gain_2"></Label>
+                    <Label Grid.Row="30" Grid.Column="3" x:Name="Tailrotor_D_Gain_3"></Label>
+                    <Label Grid.Row="30" Grid.Column="4" x:Name="Tailrotor_D_Gain_4"></Label>
+
+                    <Label Grid.Row="31" Grid.Column="0" Text="Coll Precomp."></Label>
+                    <Label Grid.Row="31" Grid.Column="1" x:Name="Tailrotor_Torque_Compensation_Collective_1"></Label>
+                    <Label Grid.Row="31" Grid.Column="2" x:Name="Tailrotor_Torque_Compensation_Collective_2"></Label>
+                    <Label Grid.Row="31" Grid.Column="3" x:Name="Tailrotor_Torque_Compensation_Collective_3"></Label>
+                    <Label Grid.Row="31" Grid.Column="4" x:Name="Tailrotor_Torque_Compensation_Collective_4"></Label>
+
+                    <Label Grid.Row="32" Grid.Column="0" Text="Cycl. Precomp."></Label>
+                    <Label Grid.Row="32" Grid.Column="1" x:Name="Tailrotor_Torque_Compensation_Cyclic_1"></Label>
+                    <Label Grid.Row="32" Grid.Column="2" x:Name="Tailrotor_Torque_Compensation_Cyclic_2"></Label>
+                    <Label Grid.Row="32" Grid.Column="3" x:Name="Tailrotor_Torque_Compensation_Cyclic_3"></Label>
+                    <Label Grid.Row="32" Grid.Column="4" x:Name="Tailrotor_Torque_Compensation_Cyclic_4"></Label>
+
+                    <Label Grid.Row="33" Grid.Column="0" Text="Stop Gain A"></Label>
+                    <Label Grid.Row="33" Grid.Column="1" x:Name="Tailrotor_Stop_Gain_A_1"></Label>
+                    <Label Grid.Row="33" Grid.Column="2" x:Name="Tailrotor_Stop_Gain_A_2"></Label>
+                    <Label Grid.Row="33" Grid.Column="3" x:Name="Tailrotor_Stop_Gain_A_3"></Label>
+                    <Label Grid.Row="33" Grid.Column="4" x:Name="Tailrotor_Stop_Gain_A_4"></Label>
+
+                    <Label Grid.Row="34" Grid.Column="0" Text="Stop Gain B"></Label>
+                    <Label Grid.Row="34" Grid.Column="1" x:Name="Tailrotor_Stop_Gain_B_1"></Label>
+                    <Label Grid.Row="34" Grid.Column="2" x:Name="Tailrotor_Stop_Gain_B_2"></Label>
+                    <Label Grid.Row="34" Grid.Column="3" x:Name="Tailrotor_Stop_Gain_B_3"></Label>
+                    <Label Grid.Row="34" Grid.Column="4" x:Name="Tailrotor_Stop_Gain_B_4"></Label>
+
+                    <Label Grid.Row="35" Grid.Column="0" Text="Optimizer A"></Label>
+                    <Label Grid.Row="35" Grid.Column="1" x:Name="Tailrotor_Optimize_Side_A_1"></Label>
+                    <Label Grid.Row="35" Grid.Column="2" x:Name="Tailrotor_Optimize_Side_A_2"></Label>
+                    <Label Grid.Row="35" Grid.Column="3" x:Name="Tailrotor_Optimize_Side_A_3"></Label>
+                    <Label Grid.Row="35" Grid.Column="4" x:Name="Tailrotor_Optimize_Side_A_4"></Label>
+
+                    <Label Grid.Row="36" Grid.Column="0" Text="Optimizer B"></Label>
+                    <Label Grid.Row="36" Grid.Column="1" x:Name="Tailrotor_Optimize_Side_B_1"></Label>
+                    <Label Grid.Row="36" Grid.Column="2" x:Name="Tailrotor_Optimize_Side_B_2"></Label>
+                    <Label Grid.Row="36" Grid.Column="3" x:Name="Tailrotor_Optimize_Side_B_3"></Label>
+                    <Label Grid.Row="36" Grid.Column="4" x:Name="Tailrotor_Optimize_Side_B_4"></Label>
+
+                    <Label Grid.Row="37" Grid.Column="0" Text="Wag Suppression"></Label>
+                    <Label Grid.Row="37" Grid.Column="1" x:Name="Tailrotor_Wag_Suppression_1"></Label>
+                    <Label Grid.Row="37" Grid.Column="2" x:Name="Tailrotor_Wag_Suppression_2"></Label>
+                    <Label Grid.Row="37" Grid.Column="3" x:Name="Tailrotor_Wag_Suppression_3"></Label>
+                    <Label Grid.Row="37" Grid.Column="4" x:Name="Tailrotor_Wag_Suppression_4"></Label>
+
+                    <Label Grid.Row="38" Grid.Column="0" Text="Auto Opti"></Label>
+                    <Label Grid.Row="38" Grid.Column="1" x:Name="Mainrotor_Autotrim_Tail"></Label>
+
+                    <Label Grid.Row="39" Grid.Column="0" Text="Tail Acceleration"></Label>
+                    <Label Grid.Row="39" Grid.Column="1" x:Name="Tail_Expert_Acceleration"></Label>
+
+                    <Label Grid.Row="41" Grid.Column="0" Text="Governor" FontAttributes="Bold"></Label>
+                    <Label Grid.Row="41" Grid.Column="1" x:Name="GovernorType" Grid.ColumnSpan="3"></Label>
+
+                    <Label Grid.Row="42" Grid.Column="0" Text="Output"></Label>
+                    <Label Grid.Row="42" Grid.Column="1" x:Name="Governor_ESC_Output_1"></Label>
+                    <Label Grid.Row="42" Grid.Column="2" x:Name="Governor_ESC_Output_2"></Label>
+                    <Label Grid.Row="42" Grid.Column="3" x:Name="Governor_ESC_Output_3"></Label>
+
+                    <Label Grid.Row="43" Grid.Column="0" Text="Headspeed"></Label>
+                    <Label Grid.Row="43" Grid.Column="1" x:Name="Headspeed_1"></Label>
+                    <Label Grid.Row="43" Grid.Column="2" x:Name="Headspeed_2"></Label>
+                    <Label Grid.Row="43" Grid.Column="3" x:Name="Headspeed_3"></Label>
+
+                    <Label Grid.Row="44" Grid.Column="0" Text="Gain"></Label>
+                    <Label Grid.Row="44" Grid.Column="1" x:Name="Governor_Gain_1"></Label>
+                    <Label Grid.Row="44" Grid.Column="2" x:Name="Governor_Gain_2"></Label>
+                    <Label Grid.Row="44" Grid.Column="3" x:Name="Governor_Gain_3"></Label>
+
+                    <Label Grid.Row="45" Grid.Column="0" Text="Nitro Idle"></Label>
+
+                    <Label Grid.Row="46" Grid.Column="0" Text="Collective Add"></Label>
+                    <Label Grid.Row="46" Grid.Column="1" x:Name="Governor_Collective_Add_1"></Label>
+                    <Label Grid.Row="46" Grid.Column="2" x:Name="Governor_Collective_Add_2"></Label>
+                    <Label Grid.Row="46" Grid.Column="3" x:Name="Governor_Collective_Add_3"></Label>
+
+                    <Label Grid.Row="47" Grid.Column="0" Text="Cyclic Add"></Label>
+                    <Label Grid.Row="47" Grid.Column="1" x:Name="Governor_Cyclic_Add_1"></Label>
+                    <Label Grid.Row="47" Grid.Column="2" x:Name="Governor_Cyclic_Add_2"></Label>
+                    <Label Grid.Row="47" Grid.Column="3" x:Name="Governor_Cyclic_Add_3"></Label>
+
+                    <Label Grid.Row="48" Grid.Column="0" Text="Collective Dynamic"></Label>
+                    <Label Grid.Row="48" Grid.Column="1" x:Name="Governor_Collective_Dynamic_1"></Label>
+                    <Label Grid.Row="48" Grid.Column="2" x:Name="Governor_Collective_Dynamic_2"></Label>
+                    <Label Grid.Row="48" Grid.Column="3" x:Name="Governor_Collective_Dynamic_3"></Label>
+
+                    <Label Grid.Row="49" Grid.Column="0" Text="Basic Throttle"></Label>
+                    <Label Grid.Row="49" Grid.Column="1" x:Name="Governor_Basic_Throttle_1"></Label>
+                    <Label Grid.Row="49" Grid.Column="2" x:Name="Governor_Basic_Throttle_2"></Label>
+                    <Label Grid.Row="49" Grid.Column="3" x:Name="Governor_Basic_Throttle_3"></Label>
+
+                    <Label Grid.Row="50" Grid.Column="0" Text="Integral"></Label>
+                    <Label Grid.Row="50" Grid.Column="1" x:Name="Governor_Integral_1"></Label>
+                    <Label Grid.Row="50" Grid.Column="2" x:Name="Governor_Integral_2"></Label>
+                    <Label Grid.Row="50" Grid.Column="3" x:Name="Governor_Integral_3"></Label>
+
+                    <Label Grid.Row="51" Grid.Column="0" Text="Proportional Limit +"></Label>
+                    <Label Grid.Row="51" Grid.Column="1" x:Name="Governor_P_Limit_1"></Label>
+                    <Label Grid.Row="51" Grid.Column="2" x:Name="Governor_P_Limit_2"></Label>
+                    <Label Grid.Row="51" Grid.Column="3" x:Name="Governor_P_Limit_3"></Label>
+
+                    <Label Grid.Row="52" Grid.Column="0" Text="Proportional Limit -"></Label>
+                    <Label Grid.Row="52" Grid.Column="1" x:Name="Governor_P_Limit_Minus_1"></Label>
+                    <Label Grid.Row="52" Grid.Column="2" x:Name="Governor_P_Limit_Minus_2"></Label>
+                    <Label Grid.Row="52" Grid.Column="3" x:Name="Governor_P_Limit_Minus_3"></Label>
+
+                    <Label Grid.Row="53" Grid.Column="0" Text="Nitro Differential"></Label>
+
+                    <Label Grid.Row="54" Grid.Column="0" Text="Min. Throttle"></Label>
+                    <Label Grid.Row="54" Grid.Column="1" x:Name="Governor_Min_Throttle"></Label>
+
+                    <Label Grid.Row="55" Grid.Column="0" Text="Nitro Direct Throttle"></Label>
+
+                    <Label Grid.Row="56" Grid.Column="0" Text="AR Idle"></Label>
+                    <Label Grid.Row="56" Grid.Column="1" x:Name="Governor_Expert_Autorotation"></Label>
+
+                    <Label Grid.Row="57" Grid.Column="0" Text="Runup Limit"></Label>
+                    <Label Grid.Row="57" Grid.Column="1" x:Name="Governor_Runup_Limit"></Label>
+
+                    <Label Grid.Row="59" Grid.Column="0" Text="Autotrim" FontAttributes="Bold"></Label>
+
+                    <Label Grid.Row="60" Grid.Column="0" Text="Aileron"></Label>
+                    <Label Grid.Row="60" Grid.Column="1" x:Name="Mainrotor_Autotrim_Aileron"></Label>
+
+                    <Label Grid.Row="61" Grid.Column="0" Text="Elevator"></Label>
+                    <Label Grid.Row="61" Grid.Column="1" x:Name="Mainrotor_Autotrim_Elevator"></Label>
+
+                    <Label Grid.Row="62" Grid.Column="0" Text="Tail"></Label>
+                    <Label Grid.Row="62" Grid.Column="1" x:Name="Autotrim_Tail"></Label>
+
+                    <Label Grid.Row="63" Grid.Column="0" Text="Autotrim Flight"></Label>
+                    <Label Grid.Row="63" Grid.Column="1" x:Name="Mainrotor_Autotrim"></Label>
+
+                    <Label Grid.Row="65" Grid.Column="0" Text="Device and Version" FontAttributes="Bold" />
+
+                    <Label Grid.Row="66" Grid.Column="0" Text="Firmware Version"></Label>
+                    <Label Grid.Row="66" Grid.Column="1" x:Name="Version"></Label>
+
+                    <Label Grid.Row="68" Grid.Column="0" Text="Model Setup" FontAttributes="Bold" />
+
+                    <Label Grid.Row="69" Grid.Column="0" Text="Basic Model Setup" FontAttributes="Bold" />
+
+                    <Label Grid.Row="70" Grid.Column="0" Text="Model Name"></Label>
+                    <Label Grid.Row="70" Grid.Column="1" x:Name="Name2" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="71" Grid.Column="0" Text="Sensor Orientation"></Label>
+                    <Label Grid.Row="71" Grid.Column="1" x:Name="SensorDirection" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="72" Grid.Column="0" Text="External Sensor"></Label>
+                    <Label Grid.Row="72" Grid.Column="1" x:Name="ExternalSensor" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="73" Grid.Column="0" Text="Rotation Direction"></Label>
+                    <Label Grid.Row="73" Grid.Column="1" x:Name="MainRotorDirection" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="75" Grid.Column="0" Text="Main Rotor Setup" FontAttributes="Bold" />
+
+                    <Label Grid.Row="76" Grid.Column="0" Text="Swashplate Type"></Label>
+                    <Label Grid.Row="76" Grid.Column="1" x:Name="SwashplateType" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="78" Grid.Column="0" Text="Elevator Top"></Label>
+                    <Label Grid.Row="78" Grid.Column="1" x:Name="End_Trim_Pos_Elevator" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="79" Grid.Column="0" Text="Aileron Top"></Label>
+                    <Label Grid.Row="79" Grid.Column="1" x:Name="End_Trim_Pos_Aileron" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="80" Grid.Column="0" Text="Elevator Bottom"></Label>
+                    <Label Grid.Row="80" Grid.Column="1" x:Name="End_Trim_Neg_Elevator" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="81" Grid.Column="0" Text="Aileron Bottom"></Label>
+                    <Label Grid.Row="81" Grid.Column="1" x:Name="End_Trim_Neg_Aileron" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="83" Grid.Column="0" Text="Cyclic Ring"></Label>
+                    <Label Grid.Row="83" Grid.Column="1" x:Name="Cyclic_Ring" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="85" Grid.Column="0" Text="Geometry Correction"></Label>
+                    <Label Grid.Row="85" Grid.Column="1" x:Name="Geometry_Correction" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="87" Grid.Column="0" Text="Zero Collective" />
+                    <Label Grid.Row="87" Grid.Column="1" x:Name="Tail_Optimize_Zero_Collective" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="89" Grid.Column="0" Text="Servo Direction Channel 1" />
+                    <Label Grid.Row="89" Grid.Column="1" x:Name="Servo_Direction_1" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="90" Grid.Column="0" Text="Servo Direction Channel 2" />
+                    <Label Grid.Row="90" Grid.Column="1" x:Name="Servo_Direction_2" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="91" Grid.Column="0" Text="Servo Direction Channel 3" />
+                    <Label Grid.Row="91" Grid.Column="1" x:Name="Servo_Direction_3" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="92" Grid.Column="0" Text="Servo Direction Channel 4" />
+                    <Label Grid.Row="92" Grid.Column="1" x:Name="Servo_Direction_4" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="94" Grid.Column="0" Text="Trim Servo Ch 1" />
+                    <Label Grid.Row="94" Grid.Column="1" x:Name="Servo_1_Center_Trim" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="95" Grid.Column="0" Text="Trim Servo Ch 2" />
+                    <Label Grid.Row="95" Grid.Column="1" x:Name="Servo_2_Center_Trim" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="96" Grid.Column="0" Text="Trim Servo Ch 3" />
+                    <Label Grid.Row="96" Grid.Column="1" x:Name="Servo_3_Center_Trim" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="97" Grid.Column="0" Text="Trim Servo Ch 4" />
+                    <Label Grid.Row="97" Grid.Column="1" x:Name="Servo_4_Center_Trim" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="99" Grid.Column="0" Text="Collective Max" />
+                    <Label Grid.Row="99" Grid.Column="1" x:Name="CollectiveMax" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="100" Grid.Column="0" Text="Collective Min" />
+                    <Label Grid.Row="100" Grid.Column="1" x:Name="CollectiveMin" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="102" Grid.Column="0" Text="Cyclic Calibration" />
+                    <Label Grid.Row="102" Grid.Column="1" x:Name="CyclicCalibration" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="104" Grid.Column="0" Text="Tail Rotor Setup" FontAttributes="Bold" />
+
+                    <Label Grid.Row="105" Grid.Column="0" Text="Tail Servo Type" />
+                    <Label Grid.Row="105" Grid.Column="1" x:Name="TailServoType" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="106" Grid.Column="0" Text="Tail Control" />
+                    <Label Grid.Row="106" Grid.Column="1" x:Name="TailControl" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="107" Grid.Column="0" Text="Tail Servo Direction" />
+                    <Label Grid.Row="107" Grid.Column="1" x:Name="Tailrotor_Servo_Reverse" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="109" Grid.Column="0" Text="Tail Servo Left Limit" />
+                    <Label Grid.Row="109" Grid.Column="1" x:Name="Tailrotor_Servo_Left_Limit" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="110" Grid.Column="0" Text="Tail Servo Right Limit" />
+                    <Label Grid.Row="110" Grid.Column="1" x:Name="Tailrotor_Servo_Right_Limit" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="112" Grid.Column="0" Text="Governor Setup" FontAttributes="Bold" />
+
+                    <Label Grid.Row="113" Grid.Column="0" Text="Governor Type" />
+                    <Label Grid.Row="113" Grid.Column="1" x:Name="GovernorType2" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="114" Grid.Column="0" Text="Collective Control" />
+                    <Label Grid.Row="114" Grid.Column="1" Text="Off" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="115" Grid.Column="0" Text="Output Control Full" />
+                    <Label Grid.Row="115" Grid.Column="1" x:Name="Governor_ESC_Endpoint_High" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="116" Grid.Column="0" Text="Output Control Stop" />
+                    <Label Grid.Row="116" Grid.Column="1" x:Name="Governor_ESC_Endpoint_Low" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="117" Grid.Column="0" Text="Gear Ratio" />
+                    <Label Grid.Row="117" Grid.Column="1" x:Name="MainGearRatio" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="118" Grid.Column="0" Text="Motor Poles" />
+                    <Label Grid.Row="118" Grid.Column="1" x:Name="Governor_Sensor_Config" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="120" Grid.Column="0" Text="Manage Banks" FontAttributes="Bold" />
+
+                    <Label Grid.Row="121" Grid.Column="0" Text="Bank 4 as AR bank" />
+                    <Label Grid.Row="121" Grid.Column="1" x:Name="AR_Bank" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="123" Grid.Column="0" Text="Flight Timer" FontAttributes="Bold" />
+
+                    <Label Grid.Row="124" Grid.Column="0" Text="Timer Duration" />
+                    <Label Grid.Row="124" Grid.Column="1" x:Name="Timer_Duration" Grid.ColumnSpan="3"/>
+
+                    <Label Grid.Row="126" Grid.Column="0" Text="RC Voltage" FontAttributes="Bold" />
+
+                    <Label Grid.Row="127" Grid.Column="0" Text="RC Voltage Warning" />
+                    <Label Grid.Row="127" Grid.Column="1" x:Name="RxVoltageWarning" Grid.ColumnSpan="3"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

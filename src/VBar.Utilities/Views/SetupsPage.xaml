@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:VBarUtilities.Converters;assembly=VBarUtilities"
+             x:Class="VBarUtilities.Views.SetupsPage"   
+            >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:AgoConverter x:Key="agoConverter" />
+            <converters:DateConverter x:Key="dateConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Add.png" Text="Add Setup" Clicked="AddSetup_Clicked" />
+        <ToolbarItem IconImageSource="VStabiLink.png" Text="VStabi Setups" Clicked="VStabiSetups_Clicked" />
+        <ToolbarItem IconImageSource="BuyMeACoffee.png" Clicked="BuyMeACoffee_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label x:Name="SetupsFound" />
+            <ListView x:Name="Setups" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Date, Converter={StaticResource dateConverter}}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding Date, Converter={StaticResource agoConverter}}" />
+                                    <Button Grid.Row="0" Grid.Column="3" Text="View" Clicked="VStabiSetupView_Clicked" BindingContext="{Binding Id}" ></Button>
+                                    <Button Grid.Row="0" Grid.Column="4" Text="Export" Clicked="VStabiSetupExport_Clicked" BindingContext="{Binding Id}" ></Button>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
