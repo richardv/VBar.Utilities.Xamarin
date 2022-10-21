@@ -15,7 +15,7 @@
         <StackLayout Margin="10">
             <StackLayout Orientation="Horizontal">
                 <Picker x:Name="Models" ItemsSource="{Binding Models}" SelectedItem="{Binding ModelName}" SelectedIndexChanged="Picker_OnSelectedIndexChanged" />
-                <CheckBox CheckedChanged="RetiredCheckBox_Changed" />
+                <CheckBox x:Name="ShowRemoved" CheckedChanged="RetiredCheckBox_Changed" />
                 <Label Text="Include Retired" />
                 <Label Text="{Binding Parts.Count, StringFormat='{0} parts found'}" />
             </StackLayout>
@@ -30,11 +30,12 @@
                                         <RowDefinition Height="Auto"></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
                                         <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Row="0" Grid.Column="0" Text="{Binding ModelName}" FontAttributes="Bold" />
                                     <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
@@ -48,7 +49,8 @@
                                     <Label Grid.Row="1" Grid.Column="2" Text="{Binding FlightLifeFmt}" />
                                     <Label Grid.Row="0" Grid.Column="3" Text="{Binding UsedPerc}" />
                                     <Label Grid.Row="1" Grid.Column="3" Text="{Binding FlightsRemaining}" />
-                                    <StackLayout Grid.Row="0" Grid.Column="4" Grid.RowSpan="2" Orientation="Horizontal">
+                                    <Ellipse Grid.Row="0" Grid.Column="4" Grid.RowSpan="2" Fill="{Binding UsedColour}" Aspect="Uniform"></Ellipse>
+                                    <StackLayout Grid.Row="0" Grid.Column="5" Grid.RowSpan="2" Orientation="Horizontal">
                                         <Button Text="Edit" BindingContext="{Binding Id}" Clicked="EditButton_Clicked"></Button>
                                         <Button Text="Delete" BindingContext="{Binding Id}" Clicked="DeleteButton_Clicked"></Button>
                                     </StackLayout>

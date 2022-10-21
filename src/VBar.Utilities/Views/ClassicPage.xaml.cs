@@ -1,14 +1,13 @@
 ﻿namespace VBarUtilities.Views
 {
     using System;
-    using Microsoft.AppCenter.Analytics;
     using VBarUtilities.ViewModels;
     using Xamarin.Essentials;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ClassicPage : ContentPage
+    public partial class ClassicPage
     {
         ClassicViewModel _viewModel;
 
@@ -21,8 +20,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

@@ -12,33 +12,36 @@
         <StackLayout Margin="10">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Text="Model" />
                 <Picker Grid.Row="0" Grid.Column="1" x:Name="ModelName" />
                 <Label Grid.Row="1" Grid.Column="0" Text="Part Number" />
-                <Entry Grid.Row="1" Grid.Column="1" x:Name="PartNo"></Entry>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="PartNo" />
                 <Label Grid.Row="2" Grid.Column="0" Text="Name" />
-                <Entry Grid.Row="2" Grid.Column="1" x:Name="Name"></Entry>
+                <Entry Grid.Row="2" Grid.Column="1" x:Name="Name" />
                 <Label Grid.Row="3" Grid.Column="0" Text="Install Date" />
                 <DatePicker Grid.Row="3" Grid.Column="1" x:Name="InstallDate" />
-                <Label Grid.Row="4" Grid.Column="0" Text="Install Time" />
-                <TimePicker Grid.Row="4" Grid.Column="1" x:Name="InstallTime" />
-                <Label Grid.Row="5" Grid.Column="0" Text="Flight Life" />
-                <Entry Grid.Row="5" Grid.Column="1" x:Name="FlightLife"></Entry>
-                <StackLayout Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
-                    <Button Text="Save" Clicked="SaveButton_Clicked"></Button>
-                    <Button Text="Cancel" Clicked="CancelButton_Clicked"></Button>
+                <Label Grid.Row="4" Grid.Column="0" Text="Flight Life" />
+                <Entry Grid.Row="4" Grid.Column="1" x:Name="FlightLife" />
+                <Label Grid.Row="5" Grid.Column="0" Text="Retired" />
+                <CheckBox Grid.Row="5" Grid.Column="1" x:Name="Removed" CheckedChanged="Removed_OnCheckedChanged" />
+                <Label Grid.Row="6" Grid.Column="0" Text="Removed Date" />
+                <DatePicker Grid.Row="6" Grid.Column="1" x:Name="RemovedDate" IsEnabled="False" />
+                <StackLayout Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
+                    <Button Text="Save" Clicked="SaveButton_Clicked" />
+                    <Button Text="Cancel" Clicked="CancelButton_Clicked" />
                 </StackLayout>
             </Grid>
         </StackLayout>

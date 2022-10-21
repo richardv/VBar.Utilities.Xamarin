@@ -1,25 +1,22 @@
 ﻿namespace VBarUtilities.Views
 {
     using System;
-    using Microsoft.AppCenter.Analytics;
     using VBarUtilities.ViewModels;
     using Xamarin.Essentials;
-    using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class LoginPage
     {
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+
+            BindingContext = new LoginViewModel();
         }
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

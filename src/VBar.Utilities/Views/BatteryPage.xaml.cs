@@ -2,7 +2,6 @@
 {
     using System;
     using System.Linq;
-    using Microsoft.AppCenter.Analytics;
     using Xamarin.Essentials;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
@@ -24,7 +23,7 @@
 
             Name.Text = id;
 
-            var vuBattery = await App.Database.GetBattery(id);
+            var vuBattery = await App.Database.GetBatteryById(id);
 
             if (vuBattery == null)
             {
@@ -78,8 +77,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-            
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
     }

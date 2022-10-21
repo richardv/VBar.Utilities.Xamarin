@@ -4,14 +4,12 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.AppCenter.Analytics;
     using VBarUtilities.ViewModels;
     using Xamarin.Essentials;
-    using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class HomePage
     {
         public HomePage()
         {
@@ -267,11 +265,6 @@
             }
         }
 
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-        }
-
         private async void OpenVStabi_Clicked(object sender, EventArgs e)
         {
             await Browser.OpenAsync("https://www.vstabi.info/en/cloud", BrowserLaunchMode.External);
@@ -279,8 +272,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
     }

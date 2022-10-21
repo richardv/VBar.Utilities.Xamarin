@@ -132,6 +132,11 @@
             return await database.InsertAsync(battery);
         }
 
+        internal async Task<int> UpdateBatteryAsync(VuBattery battery)
+        {
+            return await database.UpdateAsync(battery);
+        }
+
         public AsyncTableQuery<VuBattery> Batteries()
         {
             return database.Table<VuBattery>();
@@ -193,9 +198,9 @@
             return await database.GetAsync<VuModel>(deviceId);
         }
 
-        public async Task<VuBattery> GetBattery(string name)
+        public async Task<VuBattery> GetBatteryById(string id)
         {
-            return await database.FindAsync<VuBattery>(name);
+            return await database.FindAsync<VuBattery>(id);
         }
 
         public AsyncTableQuery<VuFlightDetail> FlightDetails()

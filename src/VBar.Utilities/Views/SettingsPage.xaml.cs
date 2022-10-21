@@ -1,14 +1,12 @@
 ﻿namespace VBarUtilities.Views
 {
     using System;
-    using System.IO;
-    using Microsoft.AppCenter.Analytics;
     using Xamarin.Essentials;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : ContentPage
+    public partial class SettingsPage
     {
         public SettingsPage()
         {
@@ -29,8 +27,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

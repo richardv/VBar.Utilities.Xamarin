@@ -1,14 +1,13 @@
 ﻿namespace VBarUtilities.Views
 {
+    using Data;
+    using Models;
+    using Syncfusion.XlsIO;
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
     using System.IO;
     using System.Text;
-    using Data;
-    using Microsoft.AppCenter.Analytics;
-    using Models;
-    using Syncfusion.XlsIO;
     using VBar;
     using ViewModels;
     using Xamarin.Essentials;
@@ -90,8 +89,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

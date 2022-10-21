@@ -4,6 +4,8 @@
 
     public class BatteryVm
     {
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
         public string Size { get; set; }
@@ -17,5 +19,7 @@
         public double LastDuration { get; set; }
 
         public DateTime FirstFlight { get; set; }
+
+        public bool Favourite { get; set; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿namespace VBarUtilities.ViewModels
 {
     using AutoMapper;
-    using Microsoft.AppCenter.Analytics;
     using System;
     using System.Linq;
     using System.Net;
@@ -111,8 +110,6 @@
 
         private async void OnLoginClicked(object obj)
         {
-            Analytics.TrackEvent("Login");
-
             if (string.IsNullOrWhiteSpace(Username) || string.IsNullOrWhiteSpace(Password))
             {
                 Status = "Complete required fields";

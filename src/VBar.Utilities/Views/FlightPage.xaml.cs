@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using Microsoft.AppCenter.Analytics;
     using VStabiCloudReader;
     using Xamarin.Essentials;
     using Xamarin.Forms;
@@ -12,7 +11,7 @@
 
     [QueryProperty("DateAndTime", "DateAndTime")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FlightPage : ContentPage
+    public partial class FlightPage
     {
         public string DateAndTime { get; set; }
 
@@ -130,8 +129,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
     }

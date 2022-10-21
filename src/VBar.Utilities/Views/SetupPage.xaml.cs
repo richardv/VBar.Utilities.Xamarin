@@ -2,7 +2,6 @@
 {
     using System;
     using System.IO;
-    using Microsoft.AppCenter.Analytics;
     using VBar;
     using Xamarin.Essentials;
     using Xamarin.Forms;
@@ -10,7 +9,7 @@
 
     [QueryProperty("SetupId", "SetupId")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SetupPage : ContentPage
+    public partial class SetupPage
     {
         public int SetupId { get; set; }
 
@@ -328,8 +327,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
     }

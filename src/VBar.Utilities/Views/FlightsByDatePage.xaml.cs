@@ -1,9 +1,7 @@
 ﻿namespace VBarUtilities.Views
 {
-    using System;
-    using System.Threading.Tasks;
     using Data;
-    using Microsoft.AppCenter.Analytics;
+    using System;
     using Xamarin.Essentials;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
@@ -50,8 +48,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
     }

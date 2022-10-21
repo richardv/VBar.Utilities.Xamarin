@@ -2,7 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
-    using Microsoft.AppCenter.Analytics;
+    using System.Threading.Tasks;
     using VBarUtilities.ViewModels;
     using Xamarin.Essentials;
     using Xamarin.Forms;
@@ -20,21 +20,31 @@
         {
             base.OnAppearing();
 
+            await LoadBatteries();
+        }
+
+        private async Task LoadBatteries()
+        {
             var batteryVms = new List<BatteryVm>();
 
-            var batteries = await App.Database.Batteries().OrderBy(b => b.Name).ToListAsync();
+            var batteries = await App.Database.Batteries()
+                .OrderByDescending(b => b.Favourite)
+                .ThenBy(b => b.Name)
+                .ToListAsync();
 
             foreach (var battery in batteries)
             {
                 batteryVms.Add(new BatteryVm
                 {
+                    Id = battery.Id,
                     Name = battery.Name,
                     Size = battery.Cells + "S " + Fmt.No(battery.mAh) + " mAh",
                     TotalFlights = battery.Flights,
                     TotalDuration = battery.FlightTimeS,
                     LastFlight = battery.LastFlight,
                     LastDuration = battery.LastDurationS,
-                    FirstFlight = battery.FirstFlight
+                    FirstFlight = battery.FirstFlight,
+                    Favourite = battery.Favourite
                 });
             }
 
@@ -50,8 +60,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 
@@ -60,6 +68,19 @@
             var batteryVm = (BatteryVm)((Button)sender).BindingContext;
 
             await Shell.Current.GoToAsync(nameof(BatteryPage) + "?id=" + batteryVm.Name);
+        }
+
+        private async void Button_OnClicked(object sender, EventArgs e)
+        {
+            var batteryVm = (BatteryVm)((Button)sender).BindingContext;
+
+            var vuBattery = await App.Database.GetBatteryById(batteryVm.Id);
+
+            vuBattery.Favourite = !batteryVm.Favourite;
+
+            await App.Database.UpdateBatteryAsync(vuBattery);
+
+            await LoadBatteries();
         }
     }
 }

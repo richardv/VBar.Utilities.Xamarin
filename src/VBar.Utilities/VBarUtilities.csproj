@@ -7,15 +7,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.5.1" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.5.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="RichardV.VBar.Setups" Version="1.0.0" />
     <PackageReference Include="RichardV.VStabi.Cloud" Version="1.0.0" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.3.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="19.3.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.XlsIO" Version="19.3.0.59" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />  
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
 

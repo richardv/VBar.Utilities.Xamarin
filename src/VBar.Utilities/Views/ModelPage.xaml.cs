@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-namespace VBarUtilities.Views
+﻿namespace VBarUtilities.Views
 {
-    using System.IO;
     using Data;
-    using Microsoft.AppCenter.Analytics;
+    using System;
+    using System.IO;
     using Xamarin.Essentials;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
 
     [QueryProperty("id", "id")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ModelPage : ContentPage
+    public partial class ModelPage
     {
         public string id { get; set; }
+
         public ModelPage()
         {
             InitializeComponent();
@@ -70,8 +64,6 @@ namespace VBarUtilities.Views
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

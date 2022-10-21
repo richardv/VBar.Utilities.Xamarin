@@ -40,7 +40,10 @@
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" />
+                                    <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                        <Button Text="{Binding Favourite, StringFormat='Favourite: {0}'}" Clicked="Button_OnClicked"></Button>
+                                    </StackLayout>
                                     <Label Grid.Row="1" Grid.Column="0" Text="{Binding Size}" />
                                     <Label Grid.Row="1" Grid.Column="1" Text="{Binding TotalFlights, Converter={StaticResource flightsConverter}}" />
                                     <Label Grid.Row="1" Grid.Column="2" Text="{Binding TotalDuration, Converter={StaticResource durationConverter}}" />

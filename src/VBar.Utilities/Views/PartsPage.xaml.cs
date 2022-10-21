@@ -1,7 +1,6 @@
 ﻿namespace VBarUtilities.Views
 {
     using Data;
-    using Microsoft.AppCenter.Analytics;
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
@@ -60,7 +59,8 @@
             var allParts = await App.Database.Parts().ToListAsync();
 
             var parts = from p in allParts
-                        where model == null || model.ToString() == p.ModelName
+                        where (model == null || model.ToString() == p.ModelName) 
+                              && (ShowRemoved.IsChecked || p.RemovedDate == null)
                         orderby p.ModelName, p.PartNo, p.Name
                         select p;
 
@@ -68,6 +68,10 @@
 
             foreach (var part in parts)
             {
+                var partFlights = flights
+                    .Where(f => f.ModelName == part.ModelName && f.DateAndTime >= part.InstallDate && (part.RemovedDate == null || f.DateAndTime <= part.RemovedDate))
+                    .ToList();
+
                 var partVm = new PartVm
                 {
                     Id = part.Id,
@@ -76,9 +80,9 @@
                     Name = part.Name,
                     FlightLife = part.FlightLife,
                     InstallDate = part.InstallDate,
-                    Flights = flights.Count(f => f.ModelName == part.ModelName && f.DateAndTime >= part.InstallDate),
-                    Duration = flights.Where(f => f.ModelName == part.ModelName && f.DateAndTime >= part.InstallDate)
-                        .Sum(f => f.DurationS)
+                    RemovedDate = part.RemovedDate,
+                    Flights = partFlights.Count,
+                    Duration = partFlights.Sum(f => f.DurationS)
                 };
 
                 partsList.Add(partVm);
@@ -89,8 +93,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 
@@ -188,9 +190,9 @@
             await LoadParts();
         }
 
-        private void RetiredCheckBox_Changed(object sender, CheckedChangedEventArgs e)
+        private async void RetiredCheckBox_Changed(object sender, CheckedChangedEventArgs e)
         {
-
+           await LoadParts();
         }
     }
 }

@@ -3,14 +3,13 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AppCenter.Analytics;
     using Xamarin.Essentials;
     using Xamarin.Forms;
     using Xamarin.Forms.Xaml;
 
     [QueryProperty("id", "id")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PartEditPage : ContentPage
+    public partial class PartEditPage
     {
         public string id { get; set; }
 
@@ -36,8 +35,13 @@
             PartNo.Text = part.PartNo;
             Name.Text = part.Name;
             InstallDate.Date = part.InstallDate.Date;
-            InstallTime.Time = part.InstallDate.TimeOfDay;
             FlightLife.Text = part.FlightLife.ToString();
+
+            if (part.RemovedDate != null)
+            {
+                Removed.IsChecked = true;
+                RemovedDate.Date = part.RemovedDate.Value;
+            }
         }
 
         private async void SaveButton_Clicked(object sender, EventArgs e)
@@ -49,8 +53,17 @@
             part.ModelName = ModelName.SelectedItem.ToString();
             part.PartNo = PartNo.Text;
             part.Name = Name.Text;
-            part.InstallDate = InstallDate.Date + InstallTime.Time;
+            part.InstallDate = InstallDate.Date;
             part.FlightLife = int.Parse(FlightLife.Text);
+
+            if (Removed.IsChecked)
+            {
+                part.RemovedDate = RemovedDate.Date;
+            }
+            else
+            {
+                part.RemovedDate = null;
+            }
 
             await App.Database.UpdatePartAsync(part);
 
@@ -69,9 +82,12 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
+        }
+
+        private void Removed_OnCheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            RemovedDate.IsEnabled = e.Value;
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿namespace VBarUtilities.Views
 {
-    using Microsoft.AppCenter.Analytics;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -60,8 +59,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

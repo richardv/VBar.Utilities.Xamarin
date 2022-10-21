@@ -34,7 +34,7 @@
                 <DatePicker Grid.Row="3" Grid.Column="1" x:Name="InstallDate" />
                 <Label Grid.Row="4" Grid.Column="0" Text="Flight Life" />
                 <Entry Grid.Row="4" Grid.Column="1" x:Name="FlightLife"></Entry>
-                <StackLayout Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
+                <StackLayout Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
                     <Button Text="Save" Clicked="SaveButton_Clicked"></Button>
                     <Button Text="Cancel" Clicked="CancelButton_Clicked"></Button>
                 </StackLayout>

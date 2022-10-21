@@ -37,5 +37,7 @@
         public int FlightAging { get; set; }
 
         public DateTime FirstFlight { get; set; }
+
+        public bool Favourite { get; set; }
     }
 }

@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.AppCenter.Analytics;
     using VBarUtilities.Data;
     using VBarUtilities.ViewModels;
     using Xamarin.Essentials;
@@ -53,8 +52,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
 

@@ -3,7 +3,6 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AppCenter.Analytics;
     using VBarUtilities.Data;
     using Xamarin.Essentials;
     using Xamarin.Forms;
@@ -11,7 +10,7 @@
 
     [QueryProperty("model", "model")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PartAddPage : ContentPage
+    public partial class PartAddPage
     {
         public string model { get; set; }
 
@@ -68,8 +67,6 @@
 
         private async void BuyMeACoffee_Clicked(object sender, EventArgs e)
         {
-            Analytics.TrackEvent("Coffee");
-
             await Browser.OpenAsync("https://www.buymeacoffee.com/3drchelipilot", BrowserLaunchMode.External);
         }
     }
