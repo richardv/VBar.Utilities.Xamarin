@@ -1,16 +1,16 @@
-﻿using VBarUtilities.Droid.Models;
+﻿using VBarUtilities.iOS.Models;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(ClassicImportAndroid))]
+[assembly: Dependency(typeof(ClassicImportIos))]
 
-namespace VBarUtilities.Droid.Models
+namespace VBarUtilities.iOS.Models
 {
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using VBarUtilities.Models;
     using ViewModels;
 
-    public class ClassicImportAndroid : IClassicImport
+    public class ClassicImportIos : IClassicImport
     {
         public async Task<IList<VbcFlight>> Logs()
         {

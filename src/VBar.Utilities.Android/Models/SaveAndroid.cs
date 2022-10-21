@@ -50,4 +50,14 @@ class SaveAndroid : ISave
             Forms.Context.StartActivity(Intent.CreateChooser(intent, "Choose App"));
         }
     }
+
+    public Task Save(string filename, string contentType, MemoryStream stream)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<string> Open()
+    {
+        throw new NotImplementedException();
+    }
 }

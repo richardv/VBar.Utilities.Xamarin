@@ -58,25 +58,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>4.5.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>4.5.1</Version>
-    </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.8.116</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>19.3.0.48</Version>
+      <Version>19.3.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
-      <Version>19.3.0.48</Version>
+      <Version>19.3.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.XlsIO">
-      <Version>19.3.0.48</Version>
+      <Version>19.3.0.59</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
   </ItemGroup>
   <ItemGroup>
@@ -117,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VBar.Utilities\VBarUtilities.csproj">
-      <Project>{c10154cb-418b-472a-8fd6-2c699ca17f5a}</Project>
+      <Project>{b8127164-6dba-420e-8604-741c1eaa2b98}</Project>
       <Name>VBarUtilities</Name>
     </ProjectReference>
   </ItemGroup>
